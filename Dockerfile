@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Description="Image for building and debugging arm-embedded projects from git"
+LABEL Description="Image for building and debugging arm-embedded projects, with Python3 installed 👍"
 WORKDIR /work
 
 ADD . /work
@@ -14,6 +14,7 @@ RUN apt-get update && \
       bzip2 \
       wget && \
     apt-get clean \
+# Add Python3
     && apt-get install -y python3-pip python3-dev \
     && cd /usr/local/bin \
     && ln -s /usr/bin/python3 python \
