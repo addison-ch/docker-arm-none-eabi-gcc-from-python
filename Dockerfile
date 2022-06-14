@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Description="Image for building and debugging arm-embedded projects, with Python3 installed 👍"
+LABEL Description="Image for building and debugging arm-embedded projects (including Python3, pip, cppcheck2.8 👍)"
 WORKDIR /work
 
 ADD . /work
